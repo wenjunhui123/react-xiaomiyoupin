@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>珠峰培训REACT项目-米家有品</title>
+    <link rel="shortcut icon" href="https://youpin.mi.com/favicon.ico">
+    <!-- IMPORT CSS -->
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_558052_cj2m7cby2xgmygb9.css">
+    <link rel="stylesheet" href="assets/css/reset.min.css">
+    <link rel="stylesheet/less" href="assets/css/index.less">
+    <link rel="stylesheet/less" href="assets/css/search.less">
+    <script src="assets/lib/less-2.5.3.min.js"></script>
+    <!-- REM COMPUTED -->
+    <script>
+        ~ function () {
+            let evt = 'onorientationchange' in window ? 'orientationchange' : 'resize';
+
+            function computed() {
+                let HTML = document.documentElement,
+                    deviceW = HTML.clientWidth,
+                    designW = 640,
+                    ratio = deviceW / designW * 100;
+                if (deviceW >= designW) ratio = 100;
+                HTML.style.fontSize = ratio + 'px';
+            }
+            computed();
+            window.addEventListener(evt, computed);
+        }();
+    </script>
+</head>
+
+<body>
+    <div id="root" class="mhome">
+        <div class="searchPage">
+            <div class="search_com">
+                <img src="https://static.home.mi.com/youpin/static/m/res/images/std_tittlebar_main_device_back_normal.png"
+                    class="icon_back">
+                <div class="search_box">
+                    <img src="https://static.home.mi.com/youpin/static/m/res/images/home_search.png" alt="">
+                    <input type="text" class="search_input" value="" placeholder="运动休闲羽绒服">
+                </div>
+                <span class="search_btn">搜索</span>
+            </div>
+            <div class="detailSearch">
+                <div class="hot_search">
+                    <h3>热门搜索</h3>
+                    <ul class="hot_list">
+                        <li><a href="#/detail/757">小米5X</a></li>
+                        <li><a href="#/detail/100982">小米笔记本Air13.3" 四核</a></li>
+                        <li><a href="#/detail/100902">小米笔记本Air 12.5" 128G</a></li>
+                        <li><a href="#/detail/100903">小米笔记本Air 12.5" 256G</a></li>
+                        <li><a href="#/detail/100596">小米笔记本Air13.3" 集显 4G版</a></li>
+                        <li><a href="#/detail/100606">小米米家空气净化器2S</a></li>
+                        <li><a href="#/detail/152">小米净水器(厨下式)</a></li>
+                        <li><a href="#/detail/100994">雪荞·小荞酒 清香型白酒</a></li>
+                        <li><a href="#/detail/100857">FOXIO 口红充电宝</a></li>
+                        <li><a href="#/detail/757">小米5X</a></li>
+                        <li><a href="#/detail/700">小米6</a></li>
+                        <li><a href="#/detail/100995">基础小挂钩 6个装</a></li>
+                        <li><a href="#/detail/100519">小米电视4C 43英寸</a></li>
+                        <li><a href="#/detail/540">小米电视4A 49英寸</a></li>
+                        <li><a href="#/detail/100980">小米电视4A 32英寸 体育版</a></li>
+                    </ul>
+                </div>
+                <div class="history_search">
+                    <h3>历史搜索 <i class="clear_Btn">清空</i></h3>
+                    <ul class="history_list">
+                        <li><a href="#/detail/100596">小米笔记本Air13.3" 集显 4G版</a></li>
+                        <li><a href="#/detail/100749">红米5 Plus</a></li>
+                        <li><a href="#/detail/757">小米5X</a></li>
+                        <li><a href="#/detail/757">小米5X</a></li>
+                        <li><a href="#/detail/757">小米5X</a></li>
+                        <li><a href="#/detail/100903">小米笔记本Air 12.5" 256G</a></li>
+                        <li><a href="#/detail/100606">小米米家空气净化器2S</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

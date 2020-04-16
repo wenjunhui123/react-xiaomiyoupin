@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>珠峰培训REACT项目-米家有品</title>
+    <link rel="shortcut icon" href="https://youpin.mi.com/favicon.ico">
+    <!-- IMPORT CSS -->
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_558052_cj2m7cby2xgmygb9.css">
+    <link rel="stylesheet" href="assets/css/reset.min.css">
+    <link rel="stylesheet/less" href="assets/css/index.less">
+    <link rel="stylesheet/less" href="assets/css/fenlei.less">
+    <script src="assets/lib/less-2.5.3.min.js"></script>
+    <!-- REM COMPUTED -->
+    <script>
+        ~ function () {
+            let evt = 'onorientationchange' in window ? 'orientationchange' : 'resize';
+
+            function computed() {
+                let HTML = document.documentElement,
+                    deviceW = HTML.clientWidth,
+                    designW = 640,
+                    ratio = deviceW / designW * 100;
+                if (deviceW >= designW) ratio = 100;
+                HTML.style.fontSize = ratio + 'px';
+            }
+            computed();
+            window.addEventListener(evt, computed);
+        }();
+    </script>
+</head>
+
+<body>
+    <div id="root" class="mhome">
+        <div class="container">
+            <div class="g-body">
+                <div class="nav">
+                    <ul>
+                        <li class="current">有品推荐</li>
+                        <li class="">居家</li>
+                        <li class="">家电</li>
+                        <li class="">手机</li>
+                        <li class="">影音</li>
+                        <li class="">日杂</li>
+                        <li class="">服饰</li>
+                        <li class="">健康</li>
+                        <li class="">餐厨</li>
+                        <li class="">智能</li>
+                        <li class="">洗护</li>
+                        <li class="">箱包</li>
+                        <li class="">婴童</li>
+                        <li class="">饮食</li>
+                        <li class="">配件</li>
+                        <li class="">出行</li>
+                        <li class="">品牌</li>
+                    </ul>
+                </div>
+                <div class="content">
+                    <div class="banner">
+                        <img src="https://shop.io.mi-img.com/app/shop/img?id=shop_31a86d0b20837496b767b62133624fc1.jpeg&amp;w=786&amp;h=395"
+                            alt="">
+                    </div>
+                    <div class="items">
+                        <div class="item">
+                            <img src="https://shop.io.mi-img.com/app/shop/img?id=shop_3142c5002e8cd07300e478007e4ced9a.jpeg&amp;w=480&amp;h=480"
+                                alt="">
+                            <span>新品</span>
+                        </div>
+                        <div class="item"></div>
+                        <div class="item"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class='tab'>
+            <a class="link">
+                <i class="icon"></i>
+                <span>首页</span>
+            </a>
+            <a class="link">
+                <i class="icon"></i>
+                <span>分类</span>
+            </a>
+            <a class="link">
+                <i class="icon"></i>
+                <span>品味</span>
+            </a>
+            <a class="link">
+                <i class="icon"></i>
+                <span>购物车</span>
+            </a>
+            <a class="link">
+                <i class="icon"></i>
+                <span>个人</span>
+            </a>
+        </div>
+    </div>
+</body>
+
+</html>

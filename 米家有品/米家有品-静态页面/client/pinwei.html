@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>珠峰培训REACT项目-米家有品</title>
+    <link rel="shortcut icon" href="https://youpin.mi.com/favicon.ico">
+    <!-- IMPORT CSS -->
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_558052_cj2m7cby2xgmygb9.css">
+    <link rel="stylesheet" href="assets/css/reset.min.css">
+    <link rel="stylesheet/less" href="assets/css/index.less">
+    <link rel="stylesheet/less" href="assets/css/pinwei.less">
+    <script src="assets/lib/less-2.5.3.min.js"></script>
+    <!-- REM COMPUTED -->
+    <script>
+        ~ function () {
+            let evt = 'onorientationchange' in window ? 'orientationchange' : 'resize';
+
+            function computed() {
+                let HTML = document.documentElement,
+                    deviceW = HTML.clientWidth,
+                    designW = 640,
+                    ratio = deviceW / designW * 100;
+                if (deviceW >= designW) ratio = 100;
+                HTML.style.fontSize = ratio + 'px';
+            }
+            computed();
+            window.addEventListener(evt, computed);
+        }();
+    </script>
+</head>
+
+<body>
+    <div id="root" class="mhome">
+        <div class="savour_main">
+            <div class="header">品味</div>
+            <ul class="savour_container">
+                <li>
+                    <a href="https://static.home.mi.com/app/shop/content?aid=t2de9503976d3a476&amp;v=1517397820">
+                        <img src="https://shop.io.mi-img.com/app/shop/img?id=shop_246bf0cb90a80b76215511294f86a134.jpeg&amp;w=1080&amp;h=501"
+                            alt="">
+                        <span>不去海底捞，家里做饭更健康</span>
+                        <b>有品生活每一天</b>
+                        <p>去发现</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://static.home.mi.com/app/shop/content?aid=t2de9503976d3a476&amp;v=1517397820">
+                        <img src="https://shop.io.mi-img.com/app/shop/img?id=shop_246bf0cb90a80b76215511294f86a134.jpeg&amp;w=1080&amp;h=501"
+                            alt="">
+                        <span>不去海底捞，家里做饭更健康</span>
+                        <b>有品生活每一天</b>
+                        <p>去发现</p>
+                    </a>
+                </li>
+            </ul>
+
+            <div class='tab'>
+                <a class="link">
+                    <i class="icon"></i>
+                    <span>首页</span>
+                </a>
+                <a class="link">
+                    <i class="icon"></i>
+                    <span>分类</span>
+                </a>
+                <a class="link">
+                    <i class="icon"></i>
+                    <span>品味</span>
+                </a>
+                <a class="link">
+                    <i class="icon"></i>
+                    <span>购物车</span>
+                </a>
+                <a class="link">
+                    <i class="icon"></i>
+                    <span>个人</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

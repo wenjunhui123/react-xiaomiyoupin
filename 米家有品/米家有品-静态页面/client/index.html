@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>珠峰培训REACT项目-米家有品</title>
+    <link rel="shortcut icon" href="https://youpin.mi.com/favicon.ico">
+    <!-- IMPORT CSS -->
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_558052_cj2m7cby2xgmygb9.css">
+    <link rel="stylesheet" href="assets/css/reset.min.css">
+    <link rel="stylesheet/less" href="assets/css/index.less">
+    <script src="assets/lib/less-2.5.3.min.js"></script>
+    <!-- REM COMPUTED -->
+    <script>
+        ~ function () {
+            let evt = 'onorientationchange' in window ? 'orientationchange' : 'resize';
+
+            function computed() {
+                let HTML = document.documentElement,
+                    deviceW = HTML.clientWidth,
+                    designW = 640,
+                    ratio = deviceW / designW * 100;
+                if (deviceW >= designW) ratio = 100;
+                HTML.style.fontSize = ratio + 'px';
+            }
+            computed();
+            window.addEventListener(evt, computed);
+        }();
+    </script>
+</head>
+
+<body>
+    <div id="root" class="mhome">
+        <div class="main-box">
+            <div class="main-header">
+                <div class="logo-box">
+                    <img src='assets/images/navi_title_v2.png' alt="" />
+                </div>
+                <div class="search-box">
+                    <img src="https://static.home.mi.com/youpin/static/m/res/images/home_search.png" alt="" />
+                    <span>年货嗨抢，最高直降1000</span>
+                </div>
+                <div class="msg-box">
+                    <div class="msg"></div>
+                </div>
+            </div>
+
+            <div class="main-body">
+                <!-- 轮播图 -->
+                <!-- <div class="slider-box">
+                    <div>
+                        <img class='slider-img' src='' alt="" />
+                    </div>
+                </div> -->
+
+                <!-- 图标导航 -->
+                <div class="link-box">
+                    <div class="react-view">
+                        <img src="https://shop.io.mi-img.com/app/shop/img?id=shop_54ca70fc076091c2584b65b68353476d.jpeg&amp;w=270&amp;h=300&amp;t=webp"
+                            alt="">
+                    </div>
+                    <div class="react-view">
+                        <img src="https://shop.io.mi-img.com/app/shop/img?id=shop_d71c74bce7255baff40ac979ec47f282.png&amp;w=270&amp;h=300&amp;t=webp"
+                            alt="">
+                    </div>
+                    <div class="react-view">
+                        <img src="https://shop.io.mi-img.com/app/shop/img?id=shop_a07dceacd5b42d513fa36b7dc5cbe3eb.jpeg&amp;w=270&amp;h=300&amp;t=webp"
+                            alt="">
+                    </div>
+                    <div class="react-view">
+                        <img src="https://shop.io.mi-img.com/app/shop/img?id=shop_0e5a7c4ff9ae447f9bcca643461bcf38.jpeg&amp;w=270&amp;h=300&amp;t=webp"
+                            alt="">
+                    </div>
+                    <div class="react-view">
+                        <img src="https://shop.io.mi-img.com/app/shop/img?id=shop_f3b0463f876a98e82d5e7592536472ce.jpeg&amp;w=270&amp;h=300&amp;t=webp"
+                            alt="">
+                    </div>
+                </div>
+
+                <!-- 热门 -->
+                <div class="main-hot-box">
+                    <div class="title-box">
+                        <span>热门</span>
+                        <a>
+                            <span>更多</span>
+                            <img src="https://static.home.mi.com/youpin/static/m/res/images/std_right_arrow_gray.png"
+                                alt="">
+                        </a>
+                    </div>
+
+                    <div class="t-row-box">
+                        <div class="row-tool">
+                            <img alt=""
+                                src="https://shop.io.mi-img.com/app/shop/img?id=shop_dc4955a7f668f79135bf689005746475.png&amp;w=537&amp;h=426,https://shop.io.mi-img.com/app/shop/img?id=shop_1d26c4fec9f7de43e090f5058a6532b2.png&amp;w=540&amp;h=420&amp;t=webp">
+                            <div class="t-row-text">
+                                <p class="row-title">鹿客智能指纹锁Classic</p>
+                                <span class="row-price">￥1699</span>
+                            </div>
+                        </div>
+                        <div class="row-tool">
+                            <img alt=""
+                                src="https://shop.io.mi-img.com/app/shop/img?id=shop_fbac9bcd7a15e60e3d6e864c66a62047.png&amp;w=540&amp;h=420,https://shop.io.mi-img.com/app/shop/img?id=shop_06a052b2c28bc7c80ad4ce96919fb82d.png&amp;w=540&amp;h=420&amp;t=webp">
+                            <div class="t-row-text">
+                                <p class="row-title">小米5X</p>
+                                <span class="row-price">￥1199</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="three-row-box">
+                        <div class="three-row">
+                            <img src="https://shop.io.mi-img.com/app/shop/img?id=shop_d52f9fa59bcd507e9807e4014ab55418.jpeg&amp;w=537&amp;h=852&amp;t=webp"
+                                alt="">
+                            <div class="t-row-text">
+                                <p class="row-title">米家空气净化器Pro</p>
+                                <p class="row-alt">澎湃动力，净化能力更快更强</p>
+                                <span class="row-price"> ￥1499</span>
+                            </div>
+                        </div>
+                        <div class="three-row">
+                            <div class="row-tool">
+                                <img alt=""
+                                    src="https://shop.io.mi-img.com/app/shop/img?id=shop_68eaff32dfae580e6ca7250ca7fa4a0b.png&amp;w=537&amp;h=426&amp;t=webp">
+                                <div class="t-row-text">
+                                    <p class="row-title">米家扫地机器人</p>
+                                    <span class="row-price">￥1699</span>
+                                </div>
+                            </div>
+                            <div class="row-tool">
+                                <img alt=""
+                                    src="https://shop.io.mi-img.com/app/shop/img?id=shop_da726d59c27705dedc637fcc169aebdf.png&amp;w=540&amp;h=420&amp;t=webp">
+                                <div class="t-row-text">
+                                    <p class="row-title">石墨烯发热腰带</p>
+                                    <span class="row-price">￥116</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 限时购 -->
+                <div class="time-buy">
+                    <div class="title-box">
+                        <span>限时购</span>
+                        <a>
+                            <span>更多</span>
+                            <img src="https://static.home.mi.com/youpin/static/m/res/images/std_right_arrow_gray.png"
+                                alt="">
+                        </a>
+                    </div>
+
+                    <div class="timer-group">
+                        <div class="timer-group-item">
+                            <div class="timer-container">
+                                <div class="timer-container-title marl">
+                                    <p>青米插线板（三孔位）</p>
+                                </div>
+                                <div class="timer-container-remaining marl">
+                                    <div class="remaining-box">
+                                        <div class="div" style="width: 64px;">
+                                            <div class="remaining"></div>
+                                        </div>
+                                    </div><span style="font-size: 0.09rem;">64%</span>
+                                </div>
+                                <div class="timer-container-price marl">
+                                    <span class="container-price-num"> ￥28
+                                        <span class="out-line"> ￥35</span>
+                                    </span>
+                                </div>
+                                <div class="timer-container-img">
+                                    <img src="https://static.home.mi.com/app/shop/img?id=shop_954d8bee31cf91966c14d93734e9ad28.jpeg&amp;t=webp"
+                                        alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 手机 -->
+                <div class="Phone-box">
+                    <div class="title-box">
+                        <span>手机</span>
+                        <a>
+                            <span>更多</span>
+                            <img src="https://static.home.mi.com/youpin/static/m/res/images/std_right_arrow_gray.png"
+                                alt="123">
+                        </a>
+                    </div>
+                    <div class="one-row">
+                        <div class="only-img">
+                            <img src="https://shop.io.mi-img.com/app/shop/img?id=shop_96e4c1cbe3aa60ccb2a698695f179aba.jpeg&amp;w=1080&amp;h=450&amp;t=webp"
+                                alt="">
+                        </div>
+                    </div>
+                    <div class="product-list-big">
+                        <ul>
+                            <li>
+                                <a href="#/detail/100749">
+                                    <div class="product-list-top">
+                                        <div>
+                                            <img src="https://shop.io.mi-img.com/app/shop/img?id=shop_a37fd8b61f8ad2181404edca13aeff6b.jpeg"
+                                                alt="">
+                                        </div>
+                                        <p>限时赠壳膜</p>
+                                    </div>
+                                    <div class="product-list-bot">
+                                        <p>红米5 Plus</p>
+                                        <p>￥<span>999</span></p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#/detail/100749">
+                                    <div class="product-list-top">
+                                        <div>
+                                            <img src="https://shop.io.mi-img.com/app/shop/img?id=shop_a37fd8b61f8ad2181404edca13aeff6b.jpeg"
+                                                alt="">
+                                        </div>
+                                        <p>限时赠壳膜</p>
+                                    </div>
+                                    <div class="product-list-bot">
+                                        <p>红米5 Plus</p>
+                                        <p>￥<span>999</span></p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#/detail/100749">
+                                    <div class="product-list-top">
+                                        <div>
+                                            <img src="https://shop.io.mi-img.com/app/shop/img?id=shop_a37fd8b61f8ad2181404edca13aeff6b.jpeg"
+                                                alt="">
+                                        </div>
+                                        <p>限时赠壳膜</p>
+                                    </div>
+                                    <div class="product-list-bot">
+                                        <p>红米5 Plus</p>
+                                        <p>￥<span>999</span></p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#/detail/100749">
+                                    <div class="product-list-top">
+                                        <div>
+                                            <img src="https://shop.io.mi-img.com/app/shop/img?id=shop_a37fd8b61f8ad2181404edca13aeff6b.jpeg"
+                                                alt="">
+                                        </div>
+                                        <p>限时赠壳膜</p>
+                                    </div>
+                                    <div class="product-list-bot">
+                                        <p>红米5 Plus</p>
+                                        <p>￥<span>999</span></p>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 更多商品 -->
+                <div class="more-box">
+                    <div class="title-box">
+                        <span>更多商品</span>
+                        <a>
+                            <span>更多</span>
+                            <img src="https://static.home.mi.com/youpin/static/m/res/images/std_right_arrow_gray.png"
+                                alt="123">
+                        </a>
+                    </div>
+                    <a href="#/detail/100907">
+                        <div class="more">
+                            <div class="more-img">
+                                <img src="https://shop.io.mi-img.com/app/shop/img?id=shop_419b5741b4c1b0e6544f70e716b47733.jpeg"
+                                    alt="">
+                            </div>
+                            <div class="more-info">
+                                <span class="more-info-title">三合一冲锋衣 </span>
+                                <span class="more-info-describe">
+                                    防水防风，耐磨抗撕裂，内胆可拆卸
+                                </span>
+                                <div class="more-info-activety">
+                                    <span>￥299 </span>
+                                    <span>直降</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- 底部 -->
+                <div class="main-footer">
+                    <div class="rompt-information"><span>底线在此,不能更低了</span></div>
+                    <div class="footer-copyright-box">
+                        <span>Copyright © 小米通讯技术有限公司 版权所有</span>
+                        <span>京ICP备17028681号-1联系电话：010-60606666</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 底部页卡区域 -->
+        <div class='tab'>
+            <a class="link">
+                <i class="icon"></i>
+                <span>首页</span>
+            </a>
+            <a class="link">
+                <i class="icon"></i>
+                <span>分类</span>
+            </a>
+            <a class="link">
+                <i class="icon"></i>
+                <span>品味</span>
+            </a>
+            <a class="link">
+                <i class="icon"></i>
+                <span>购物车</span>
+            </a>
+            <a class="link">
+                <i class="icon"></i>
+                <span>个人</span>
+            </a>
+        </div>
+    </div>
+</body>
+
+</html>
